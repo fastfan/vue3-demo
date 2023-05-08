@@ -2,11 +2,13 @@
  * @Author: fastfan
  * @Date: 2023-05-08 11:19:14
  * @LastEditors: fastfan
- * @LastEditTime: 2023-05-08 16:10:56
+ * @LastEditTime: 2023-05-08 17:41:22
  * @Description: your description
 -->
 <script setup lang="ts">
 import { useAttrs, useSlots } from 'vue'
+
+// 通过泛型参数来定义 props 的类型
 defineProps<{
   msg: string
 }>()

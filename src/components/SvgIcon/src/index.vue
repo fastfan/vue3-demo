@@ -21,7 +21,7 @@ const props = defineProps({
   },
   size: {
     type: String,
-    default: '1em'
+    default: '32px'
   }
 })
 
