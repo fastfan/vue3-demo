@@ -1,13 +1,22 @@
 import { resolve } from 'path'
 
 import { defineConfig } from 'vite'
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   base: "./",   // 开发环境和生产环境路径  如果放如的生产环境不是在根目录下，需要要加上放入文件的文件名 '/product'
-  plugins: [vue(), vueJsx()],
+  plugins: [
+    vue(), vueJsx(),
+    // @ts-ignore
+    createSvgIconsPlugin({
+      // 指定需要缓存的图标文件夹
+      iconDirs: [resolve(process.cwd(), 'src/icons')],
+      // 指定symbolId格式
+      symbolId: 'icon-[dir]-[name]',
+    })],
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),

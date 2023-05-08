@@ -5,6 +5,8 @@ import { createPinia } from 'pinia'
 
 import App from './App.vue'
 import router from './router'
+import svgIcon from "@/components/SvgIcon/index"
+import 'virtual:svg-icons-register'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 
@@ -12,6 +14,7 @@ const app = createApp(App)
 
 app.use(createPinia())
 app.use(router)
+app.component('svg-icon', svgIcon)
 app.use(ElementPlus, { size: 'small', zIndex: 3000 })
 
 app.mount('#app')

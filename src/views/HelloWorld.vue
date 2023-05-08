@@ -2,7 +2,7 @@
  * @Author: fastfan
  * @Date: 2023-05-08 11:19:14
  * @LastEditors: fastfan
- * @LastEditTime: 2023-05-08 13:33:07
+ * @LastEditTime: 2023-05-08 16:10:56
  * @Description: your description
 -->
 <script setup lang="ts">
@@ -42,6 +42,7 @@ export default {
   <!-- 在模板中使用插槽 -->
   <slot></slot>
   <slot name="footer"></slot>
+  <svg-icon name="car" />
   <el-button @click="handleChangeMsg">handleChangeMsg</el-button>
 </template>
 <style scoped lang="scss">
