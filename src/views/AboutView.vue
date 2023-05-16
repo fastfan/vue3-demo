@@ -61,7 +61,7 @@
 <script setup lang="ts">
 import HelloWorld from './HelloWorld.vue'
 import RefTest from './RefTest.vue'
-import { getIndicatorInformation } from '@/api/common'
+import { getIndicatorInformation } from '@/api/common.js'
 import { reactive, ref, onMounted, getCurrentInstance } from 'vue'
 // 获取当前组件的实例对象，相当于 vue2 的 this,请不要把它当作在组合式 API 中获取 this 的替代方案来使用。getCurrentInstance 只能在 setup 或生命周期钩子中调用。
 const instance = getCurrentInstance()

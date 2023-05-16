@@ -2,7 +2,7 @@
  * @Author: fastfan
  * @Date: 2023-05-06 15:44:38
  * @LastEditors: fastfan
- * @LastEditTime: 2023-05-08 14:49:50
+ * @LastEditTime: 2023-05-16 15:43:18
  * @Description: your description
  */
 import request from '@/utils/request'
@@ -30,5 +30,12 @@ export function getIndicatorInformation(params: unknown) {
         url: `${pre_url}/api/maintainStatisticalReport/getIndicatorInformation`,
         method: 'get',
         params
+    })
+}
+export function maintainPlanDeleteById(data: unknown) {
+    return request({
+        url: `${pre_url}/api/expenseManagement/deleteById`,
+        method: 'post',
+        data
     })
 }

@@ -2,6 +2,11 @@ import { resolve } from 'path'
 
 import { defineConfig } from 'vite'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+// 自动导入vue中hook reactive ref等
+import AutoImport from 'unplugin-auto-import/vite'
+//自动导入ui-组件 比如说ant-design-vue  element-plus等
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 
@@ -16,6 +21,13 @@ export default defineConfig({
       iconDirs: [resolve(process.cwd(), 'src/icons')],
       // 指定symbolId格式
       symbolId: 'icon-[dir]-[name]',
+    }),
+    //element按需导入
+    AutoImport({
+      resolvers: [ElementPlusResolver()],
+    }),
+    Components({
+      resolvers: [ElementPlusResolver()],
     })],
   resolve: {
     alias: {

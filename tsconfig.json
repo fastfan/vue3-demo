@@ -21,7 +21,8 @@
     "paths": { "@/*": ["src/*"], "#/*": ["types/*"] } //路径映射,配合别名使用
   },
   //需要检测的文件
-  // "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": ["Element-puls.d.ts", "auto-imports.d.ts"], // "src/**/*.ts*", "src/**/*.d.ts", "src/**/*.tsx","src/**/*.vue",
+  "exclude": ["node_modules"],
   "references": [
     //为文件进行不同配置
     {
