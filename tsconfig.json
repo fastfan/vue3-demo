@@ -21,7 +21,7 @@
     "paths": { "@/*": ["src/*"], "#/*": ["types/*"] } //路径映射,配合别名使用
   },
   //需要检测的文件
-  "include": ["Element-puls.d.ts", "auto-imports.d.ts"],
+  "include": ["Element-puls.d.ts", "auto-imports.d.ts", "src/**/*.json"],
   "exclude": ["node_modules"],
   "references": [
     //为文件进行不同配置
